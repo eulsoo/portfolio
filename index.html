@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mother {
+            position: relative;
+            border:10px solid red; 
+            width:70%; 
+            height:300px;
+            overflow: hidden;
+        }
+        .mother > img {
+            position: absolute;
+            z-index: 1000;
+            min-width: 100%;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* margin-left:-458px;
+            margin-top:-325px; */
+        }
+        .mother > .son {
+            position: absolute;
+            /* margin:auto; */
+            /* margin-left:-50px;
+            margin-top:-50px; */
+            transform: translate(-50%, -50%);
+            top:50%;
+            left:50%;
+            right:0;
+            bottom:0;
+            width:30%;
+            height:30%;
+            background-color: chartreuse;
+        }
+        .fix {
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background-color: rgba(0,0,0,0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="mother">
+        <!-- <div class="son"></div> -->
+        <img src="photo.png"/>
+    </div>
+
+    <div class="fix"></div>
+</body>
+</html>
